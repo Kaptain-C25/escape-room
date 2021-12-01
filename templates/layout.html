@@ -21,19 +21,22 @@
 
 <body>
 
-<nav class="bg-light border navbar navbar-expand-md navbar-light">
-    <div class="container-fluid">
-        <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
-                data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav me-auto mt-2">
-                <li class="nav-item"><img src="../static/assets/cup.jpg" alt="cup" width="60"></li>
-            </ul>
+    <nav class="bg-light border navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                    data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mt-2">
+                    {% for item in items %}
+                    <li class="nav-item"><img src="../static/assets/{{ item }}.jpg" alt="{{ item }}" width="60"></li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
     <main gitclass="container-fluid py-5 text-center">
         {% block body %}{% endblock %}
     </main>
