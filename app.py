@@ -19,6 +19,9 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+@app.route("/")
+def homepage():
+    return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
 def room_1():
