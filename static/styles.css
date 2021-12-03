@@ -13,6 +13,17 @@
     height: auto;
  }
 
+ .homecontainer .title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    -ms-transform: translate(-40%, -50%);
+    color: white;
+    font-family: monospace;
+    font-weight: 800;
+ }
+
  .homecontainer .startbtn {
     position: absolute;
     top: 50%;

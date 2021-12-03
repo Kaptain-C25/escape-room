@@ -16,7 +16,8 @@ solved = {1: False, 2: False, 3: False, 4: False}
 def solve_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if 
+        # figure out how to check if previous room is solved
+        if False:
             return redirect("/login")
         return f(*args, **kwargs)
     return decorated_function
@@ -31,8 +32,6 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def homepage():
-    if request.method == "POST":
-        return redirect("/room_1")
     return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
