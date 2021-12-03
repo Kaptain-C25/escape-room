@@ -19,8 +19,10 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def homepage():
+    if request.method == "POST":
+        return redirect("/room_1")
     return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
@@ -47,8 +49,7 @@ def room_3():
 
 @app.route("/end", methods=["GET", "POST"])
 def end():
-    if request.method == "GET":
-        return redirect("/end")
-    else:
-        return render_template("room_3.html")
+    if request.method == "POST":
+        return redirect("/homepage")
+    return render_template("end.html")
 
