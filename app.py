@@ -21,29 +21,34 @@ def after_request(response):
 
 @app.route("/")
 def homepage():
-    if request.method == "GET":
-        return render_template("homepage.html")
-    else:
-        return render_template("room_1.html")
+    return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
 def room_1():
     if request.method == "POST":
-        return render_template("room_2.html")
+        return redirect("/room_2")
+    else:
+        return render_template("room_1.html")
 
 
 @app.route("/room_2", methods=["GET", "POST"])
 def room_2():
     if request.method == "POST":
-        return render_template("room_3.html")
+        return redirect("/room_3")
+    else:
+        return render_template("room_2.html")
 
 @app.route("/room_3", methods=["GET", "POST"])
 def room_3():
     if request.method == "POST":
-        return render_template("end.html")
+        return redirect("/end")
+    else:
+        return render_template("room_3.html")
 
 @app.route("/end", methods=["GET", "POST"])
 def end():
-    if request.method == "POST":
-        return render_template("homepage.html")
+    if request.method == "GET":
+        return redirect("/end")
+    else:
+        return render_template("room_3.html")
 
