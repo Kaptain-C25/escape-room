@@ -10,7 +10,7 @@ body, html {
   
   .bg {
     /* The image used */
-    background-image: url("escaperoom3.jpg");
+    background-image: url("static/assets/escaperoom3.jpg");
   
     /* Full height */
     height: 100%; 
