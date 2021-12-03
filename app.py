@@ -29,17 +29,17 @@ def room_1():
         return render_template("room_2.html")
 
 @app.route("/room_2", methods=["GET", "POST"])
-def room_1():
+def room_2():
     if request.method == "POST":
         return render_template("room_3.html")
 
 @app.route("/room_3", methods=["GET", "POST"])
-def room_1():
+def room_3():
     if request.method == "POST":
         return render_template("end.html")
 
 @app.route("/end", methods=["GET", "POST"])
-def room_1():
+def end():
     if request.method == "POST":
         return render_template("homepage.html")
 
