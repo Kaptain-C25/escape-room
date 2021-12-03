@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    One
+{% endblock %}
+
+{% block body %}
+    <img src="static/assets/room_1.jpg" alt="Room One" class="room">
+    <form action="/end" method="post">
+        <button class="btn btn-primary" type="submit"></button>
+    </form>
+{% endblock %}

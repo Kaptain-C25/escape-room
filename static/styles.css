@@ -3,6 +3,11 @@
     background-color: #537fbe
 }
 
+.startpage {
+    height: auto;
+    width: 100
+}
+
 .room {
    height: auto;
    width: 100%;
