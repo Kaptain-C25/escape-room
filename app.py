@@ -21,7 +21,6 @@ def after_request(response):
 
 @app.route("/")
 def homepage():
-    if request.method == 
     return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
