@@ -3,19 +3,21 @@
     background-color: #537fbe
 }
 
-.startpage {
-    min-height: 100%;
-    min-width: 1024px;
-      
-    /* Set up proportionate scaling */
+.homecontainer {
+    position: relative;
+    width: 100%;
+ }
+
+ .homecontainer .startpage {
     width: 100%;
     height: auto;
-      
-    /* Set up positioning */
-    position: fixed;
-    top: 0;
-    left: 0;
-}
+ }
+ .homecontainer .submitbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
 
 .room {
    height: auto;
