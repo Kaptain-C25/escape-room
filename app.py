@@ -21,14 +21,16 @@ def after_request(response):
 
 @app.route("/")
 def homepage():
-    return render_template("homepage.html")
+    if request.method == "GET":
+        return render_template("homepage.html")
+    else:
+        return render_template("room_1.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
 def room_1():
     if request.method == "POST":
         return render_template("room_2.html")
-    else:
-        return render_template("room_1.html")
+
 
 @app.route("/room_2", methods=["GET", "POST"])
 def room_2():
