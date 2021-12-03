@@ -32,7 +32,6 @@ def room_1():
     else:
         return render_template("room_1.html")
 
-
 @app.route("/room_2", methods=["GET", "POST"])
 def room_2():
     if request.method == "POST":
