@@ -27,6 +27,8 @@ def homepage():
 def room_1():
     if request.method == "POST":
         return render_template("room_2.html")
+    else:
+        return render_template("room_1.html")
 
 @app.route("/room_2", methods=["GET", "POST"])
 def room_2():
