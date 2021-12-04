@@ -17,7 +17,7 @@ solved = {1: False, 2: False, 3: False, 4: False}
 def solve_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if solved[location-1] == False:
+        if solved[location - 1] == False:
             if location == 1:
                 return redirect("/")
             else:
@@ -40,9 +40,11 @@ def homepage():
 @app.route("/room_1", methods=["GET", "POST"])
 @solve_required
 def room_1():
+    global location
+    global solved
     if request.method == "POST":
         solved[location] = True
-        location + 1 = location
+        location += 1
         return redirect("/room_2", code=303)
     else:
         return render_template("room_1.html")
@@ -50,6 +52,11 @@ def room_1():
 @app.route("/room_2", methods=["GET", "POST"])
 @solve_required
 def room_2():
+    global location
+    global solved
+    if request.method == "POST":
+        solved[location] = True
+        location += 1
     if request.method == "POST":
         return redirect("/room_3", code=303)
     else:
@@ -58,12 +65,16 @@ def room_2():
 @app.route("/room_3", methods=["GET", "POST"])
 @solve_required
 def room_3():
+    global location
+    global solved
     if request.method == "POST":
+        solved[location] = True
+        location += 1
         return redirect("/end")
     else:
         return render_template("room_3.html")
 
-@app.route("/end", methods=["GET", "POST"])
+@app.route("/end")
 @solve_required
 def end():
     return render_template("end.html")
