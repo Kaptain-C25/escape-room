@@ -39,6 +39,30 @@
     border-radius: 5px;
 }
 
+.room1btn1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.room1btn2 {
+   
+}
+
+.room1btn3 {
+   
+}
+
+.room1btn4 {
+   
+}
+
+.room1btn5 {
+   
+}
+
 .room {
    height: auto;
    width: 100%;
