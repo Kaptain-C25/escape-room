@@ -1,6 +1,17 @@
+@font-face {
+   font-family: 'arcadeclassic';
+   src: 'static/assets/arcadeclassic-webfont.woff2' format('woff2'),
+        'static/assets/arcadeclassic-webfont.woff' format('woff'),
+        'static/assets/ARCADECLASSIC.tff';
+   font-weight: normal;
+   font-style: normal;
+
+}
+
+
 #navbar
 {
-    background-color: #537fbe
+   background-color: #537fbe;
 }
 
 .homecontainer {
@@ -20,7 +31,7 @@
     transform: translate(-50%, -40%);
     -ms-transform: translate(-50%, -40%);
     color: white;
-    font-family: monospace;
+    font-family: arcadeclassic;
     font-weight: 800;
  }
 
