@@ -11,14 +11,14 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///inventory.db")
 
-location = 1
-solved = {1: False, 2: False, 3: False, 4: False}
+location = 0
+solved = {0: True, 1: False, 2: False, 3: False, 4: False}
 
 def solve_required(loc):
     def test(f):
         @wraps(f)
         def decorated_function(*args, **kwargs):
-            if (loc != 1) and (solved[loc - 1] == False):
+            if solved[loc - 1] == False:
                 return redirect(f"/room_{loc - 1}")
             return f(*args, **kwargs)
         return decorated_function
@@ -34,12 +34,21 @@ def after_request(response):
 
 @app.route("/")
 def homepage():
+    global location
+    location = 0
     return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
 @solve_required(1)
 def room_1():
-    return render_template("room_1.html")
+    global location
+    global solved
+    if request.method == "POST":
+        solved[location] = True
+        location += 1
+        return redirect("/room_2", code=303)
+    else:
+        return render_template("room_1.html")
 
 @app.route("/room_2", methods=["GET", "POST"])
 @solve_required(2)
