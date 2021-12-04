@@ -42,7 +42,8 @@ def homepage():
 def room_1():
     if request.method == "POST":
         solved[location] = True
-        return redirect("room_2")
+        location + 1 = location
+        return redirect("/room_2", code=303)
     else:
         return render_template("room_1.html")
 
@@ -50,7 +51,7 @@ def room_1():
 @solve_required
 def room_2():
     if request.method == "POST":
-        return redirect("/room_3")
+        return redirect("/room_3", code=303)
     else:
         return render_template("room_2.html")
 
@@ -65,6 +66,4 @@ def room_3():
 @app.route("/end", methods=["GET", "POST"])
 @solve_required
 def end():
-    if request.method == "POST":
-        return redirect("/homepage")
     return render_template("end.html")
