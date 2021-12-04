@@ -14,50 +14,48 @@
         <button class="btn btn-primary" type="submit"></button>
     </form>
    
-    <button class="room1btn1" onclick="openForm()"></button>
-
+    <button class="room1btn1" onclick="openForm(1)"></button>
     <div class="form-popup" id="myForm1">
         <form action="/hint_1_1" class="form-container", method="POST">
             <h1>Game 1</h1>
             <label for="hint"><b>Hint</b></label>
             <input type="text" name="hint_1_1" required>
             <button type="submit" class="btn">Try</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="button" class="btn cancel" onclick="closeForm(1)">Close</button>
         </form>
     </div>
-
+    
+    <button class="room1btn2" onclick="openForm(2)"></button>
     <div class="form-popup" id="myForm2">
         <form action="/hint_1_2" class="form-container", method="POST">
             <h1>Game 2</h1>
             <label for="hint"><b>Hint</b></label>
             <input type="text" name="hint_1_2" required>
             <button type="submit" class="btn">Try</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="button" class="btn cancel" onclick="closeForm(2)">Close</button>
         </form>
     </div>
 
+    <button class="room1btn3" onclick="openForm(3)"></button>
     <div class="form-popup" id="myForm3">
         <form action="/hint_1_3" class="form-container", method="POST">
             <h1>Game 3</h1>
             <label for="hint"><b>Hint</b></label>
             <input type="text" name="hint_1_3" required>
             <button type="submit" class="btn">Try</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="button" class="btn cancel" onclick="closeForm(3)">Close</button>
         </form>
     </div>
-
+    
+    <button class="room1btn4" onclick="openForm(4)"></button>
     <div class="form-popup" id="myForm4">
         <form action="/hint_1_4" class="form-container", method="POST">
             <h1>Game 4</h1>
             <label for="hint"><b>Hint</b></label>
             <input type="text" name="hint_1_4" required>
             <button type="submit" class="btn">Try</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="button" class="btn cancel" onclick="closeForm(4)">Close</button>
         </form>
     </div>
 
-    <button class="room1btn2" type="submit"></button>
-    <button class="room1btn3" type="submit"></button>
-    <button class="room1btn4" type="submit"></button>
-    <button class="room1btn5" type="submit"></button>
 {% endblock %}

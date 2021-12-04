@@ -28,10 +28,10 @@
     left: 50%;
     transform: translate(-50%, -40%);
     -ms-transform: translate(-50%, -40%);
-    color: #FFFF66;
+    /*color: #FFFF66;
     font-family: arcadeclassicregular;
     font-weight: 800;
-    font-size: 100px;
+    font-size: 100px;*/
  }
 
  .homecontainer .startbtn {
