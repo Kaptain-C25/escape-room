@@ -6,13 +6,34 @@
 
 {% block body %}
     <img src="static/assets/room_1.jpg" alt="Room One" class="room">
+    
     <form action="/room_1" method="post">
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="room_1_answer" class="answer" type="text">
         </div>
         <button class="btn btn-primary" type="submit"></button>
     </form>
-    <button class="room1btn1" type="submit"></button>
+   
+    <button class="room1btn1" onclick="openForm()"></button>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Game 1</h1>
+            <label for="hint"><b>Hint</b></label>
+            <input type="text" name="hint" required>
+            <button type="submit" class="btn">Try</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
     <button class="room1btn2" type="submit"></button>
     <button class="room1btn3" type="submit"></button>
     <button class="room1btn4" type="submit"></button>
