@@ -12,16 +12,16 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 db = SQL("sqlite:///inventory.db")
 
 location = 1
-solved = {1: False, 2: False, 3: False, 4: False}
+solved = {1: False, 2: False, 3: False}
 
 def solve_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if solved[location - 1] == False:
+        if solved[location] == False:
             if location == 1:
                 return redirect("/")
             else:
-                return redirect(f"/room_{location}")
+                return redirect(f"/room_{location - 1}")
         return f(*args, **kwargs)
     return decorated_function
 
