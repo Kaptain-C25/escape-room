@@ -56,7 +56,11 @@
 }
 
 .room1btn3 {
-   
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    transform: translate(-20%, -50%);
+    -ms-transform: translate(-20%, -50%);
 }
 
 .room1btn4 {
