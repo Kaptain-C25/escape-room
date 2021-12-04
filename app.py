@@ -42,14 +42,7 @@ def homepage():
 @app.route("/room_1", methods=["GET", "POST"])
 @solve_required(1)
 def room_1():
-    global location
-    global solved
-    if request.method == "POST":
-        solved[location] = True
-        location += 1
-        return redirect("/room_2", code=303)
-    else:
-        return render_template("room_1.html")
+    return render_template("room_1.html")
 
 @app.route("/room_2", methods=["GET", "POST"])
 @solve_required(2)
