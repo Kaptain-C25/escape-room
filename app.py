@@ -42,14 +42,19 @@ def homepage():
 def room_1():
     global solved
     global items
-    if request.method == "hint_1":
-        items += 'W'
-        return redirect("/room_1", code=303)
     if request.method == "POST":
         solved[1] = True
         return redirect("/room_2", code=303)
     else:
         return render_template("room_1.html", items=items)
+
+@app.route("/hint_1_1", methods=["POST"])
+@solve_required(1)
+def hint_1_1():
+    global items
+    if request.form.get("hint_1_1") == "Kaitlyn":
+        items += 'W'
+    return render_template("room_1.html", items=items)
 
 @app.route("/room_2", methods=["GET", "POST"])
 @solve_required(2)
