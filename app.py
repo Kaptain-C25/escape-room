@@ -35,7 +35,7 @@ def after_request(response):
 def homepage():
     return render_template("homepage.html")
 
-@app.route("/room_1", methods=["GET", "POST"])
+@app.route("/room_1", methods=["GET", "POST","HINT_1"])
 @solve_required(1)
 def room_1():
     global solved
