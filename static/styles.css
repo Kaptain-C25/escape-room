@@ -63,7 +63,8 @@
    cursor: pointer;
    border-radius: 5px;
 }
-.form-popup {
+
+#myForm1_1 {
    display: none;
    position: absolute;
    top: 60%;
@@ -72,7 +73,33 @@
    background-color: white;
    z-index: 9;
  }
-
+ #myForm1_2 {
+   display: none;
+   position: absolute;
+   top: 60%;
+   left: 51%;
+   border: 3px solid #f1f1f1;
+   background-color: white;
+   z-index: 9;
+ }
+ #myForm1_3 {
+   display: none;
+   position: absolute;
+   top: 60%;
+   left: 51%;
+   border: 3px solid #f1f1f1;
+   background-color: white;
+   z-index: 9;
+ }
+ #myForm1_4 {
+   display: none;
+   position: absolute;
+   top: 60%;
+   left: 51%;
+   border: 3px solid #f1f1f1;
+   background-color: white;
+   z-index: 9;
+ }
 .room1btn1 {
     position: absolute;
     top: 60%;
