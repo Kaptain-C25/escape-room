@@ -48,7 +48,7 @@ def room_1():
     if request.method == "POST":
         solved[1] = True
         return redirect("/room_2", code=303)
-    elif request.method == "GET":
+    else:
         return render_template("room_1.html", items=items)
 
 @app.route("/room_2", methods=["GET", "POST"])
