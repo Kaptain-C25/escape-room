@@ -24,11 +24,11 @@
 
  .homecontainer .title {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -40%);
     -ms-transform: translate(-50%, -40%);
-    color: yellow;
+    color: #FFFF66;
     font-family: arcadeclassicregular;
     font-weight: 800;
     font-size: 100px;
@@ -42,7 +42,7 @@
     -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
-    font-size: 16px;
+    font-size: 25px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
