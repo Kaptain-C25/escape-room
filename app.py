@@ -1,3 +1,4 @@
+import re
 from cs50 import SQL
 from flask import Flask, redirect, render_template, request
 from functools import wraps
@@ -12,6 +13,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 db = SQL("sqlite:///inventory.db")
 
 solved = {0: True, 1: False, 2: False, 3: False, 4: False}
+items = []
 
 def solve_required(loc):
     def test(f):
@@ -35,15 +37,19 @@ def after_request(response):
 def homepage():
     return render_template("homepage.html")
 
-@app.route("/room_1", methods=["GET", "POST","HINT_1"])
+@app.route("/room_1", methods=["GET", "POST","hint_1"])
 @solve_required(1)
 def room_1():
     global solved
+    global items
+    if request.method == "hint_1":
+        items += 'W'
+        return redirect("/room_1", code=303)
     if request.method == "POST":
         solved[1] = True
         return redirect("/room_2", code=303)
-    else:
-        return render_template("room_1.html")
+    elif request.method == "GET":
+        return render_template("room_1.html", items=items)
 
 @app.route("/room_2", methods=["GET", "POST"])
 @solve_required(2)
