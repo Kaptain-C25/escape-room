@@ -78,10 +78,10 @@
     left: 84%;
     transform: translate(-20%, -50%);
     -ms-transform: translate(-20%, -50%);
-    /*background: transparent;
-    border-color: transparent;*/
+    background: transparent;
+    border-color: transparent;
     padding: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 35px;
 }
 
 .room1btn5 {
