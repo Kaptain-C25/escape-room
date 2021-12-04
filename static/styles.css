@@ -58,6 +58,7 @@
     -ms-transform: translate(-20%, -50%);
     background: transparent;
     border-color: transparent;
+    padding: 22px;
 }
 
 .room1btn3 {
@@ -68,16 +69,19 @@
     -ms-transform: translate(-20%, -50%);
     background: transparent;
     border-color: transparent;
+    padding: 10px;
 }
 
 .room1btn4 {
     position: absolute;
-    top: 90%;
-    left: 75%;
+    top: 85%;
+    left: 84%;
     transform: translate(-20%, -50%);
     -ms-transform: translate(-20%, -50%);
-    background: transparent;
-    border-color: transparent;
+    /*background: transparent;
+    border-color: transparent;*/
+    padding: 5px;
+    padding-bottom: 10px;
 }
 
 .room1btn5 {
@@ -88,6 +92,7 @@
     -ms-transform: translate(-20%, -50%);
     background: transparent;
     border-color: transparent;
+    padding: 30px;
 }
 
 .room {
