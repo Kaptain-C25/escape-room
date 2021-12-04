@@ -64,43 +64,20 @@
    border-radius: 5px;
 }
 
-#myForm1_1 {
-   display: none;
-   position: absolute;
-   top: 60%;
-   left: 51%;
+.form-popup {
    border: 3px solid #f1f1f1;
    background-color: white;
    z-index: 9;
  }
- #myForm1_2 {
-   display: none;
+
+ /* need more formating */
+.hint1_1 {
    position: absolute;
    top: 60%;
    left: 51%;
-   border: 3px solid #f1f1f1;
-   background-color: white;
-   z-index: 9;
- }
- #myForm1_3 {
-   display: none;
-   position: absolute;
-   top: 60%;
-   left: 51%;
-   border: 3px solid #f1f1f1;
-   background-color: white;
-   z-index: 9;
- }
- #myForm1_4 {
-   display: none;
-   position: absolute;
-   top: 60%;
-   left: 51%;
-   border: 3px solid #f1f1f1;
-   background-color: white;
-   z-index: 9;
- }
-.room1btn1 {
+}
+
+#room1btn1 {
     position: absolute;
     top: 60%;
     left: 51%;
@@ -111,7 +88,7 @@
     border-color: transparent;
 }
 
-.room1btn2 {
+#room1btn2 {
     position: absolute;
     top: 10%;
     left: 20%;
@@ -122,7 +99,7 @@
     padding: 22px;
 }
 
-.room1btn3 {
+#room1btn3 {
     position: absolute;
     top: 90%;
     left: 30%;
@@ -133,7 +110,7 @@
     padding: 10px;
 }
 
-.room1btn4 {
+#room1btn4 {
     position: absolute;
     top: 85%;
     left: 84%;
