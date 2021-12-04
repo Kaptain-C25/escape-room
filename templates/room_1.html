@@ -7,10 +7,14 @@
 {% block body %}
     <img src="static/assets/room_1.jpg" alt="Room One" class="room">
     <form action="/room_1" method="post">
-        <button class="room1btn1" type="submit"></button>
-        <button class="room1btn2" type="submit"></button>
-        <button class="room1btn3" type="submit"></button>
-        <button class="room1btn4" type="submit"></button>
-        <button class="room1btn5" type="submit"></button>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="room_1_answer" class="answer" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit"></button>
     </form>
+    <button class="room1btn1" type="submit"></button>
+    <button class="room1btn2" type="submit"></button>
+    <button class="room1btn3" type="submit"></button>
+    <button class="room1btn4" type="submit"></button>
+    <button class="room1btn5" type="submit"></button>
 {% endblock %}
