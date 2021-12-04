@@ -53,13 +53,17 @@ def room_1():
 def hint_1():
     global items
     if request.form.get("hint_1_1") == "Kaitlyn":
-        items += 'W'
+        if 'W' not in items:
+            items += 'W'
     elif request.form.get("hint_1_2") == "Kaitlyn":
-        items += 'A'
+        if 'A' not in items:
+            items += 'A'
     elif request.form.get("hint_1_3") == "Kaitlyn":
-        items += 'S'
+        if 'S' not in items:
+            items += 'S'
     elif request.form.get("hint_1_4") == "Kaitlyn":
-        items += 'P'
+        if 'P' not in items:
+            items += 'P'
     return render_template("room_1.html", items=items)
 
 @app.route("/room_2", methods=["GET", "POST"])
@@ -70,7 +74,7 @@ def room_2():
         solved[2] = True
         return redirect("/room_3", code=303)
     else:
-        return render_template("room_2.html")
+        return render_template("room_2.html", items=items)
 
 @app.route("/room_3", methods=["GET", "POST"])
 @solve_required(3)
@@ -80,7 +84,7 @@ def room_3():
         solved[3] = True
         return redirect("/end")
     else:
-        return render_template("room_3.html")
+        return render_template("room_3.html", items=items)
 
 @app.route("/end")
 @solve_required(4)
