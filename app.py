@@ -11,14 +11,15 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///inventory.db")
 
+location = 1
 solved = {1: False, 2: False, 3: False, 4: False}
 
 def solve_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         # figure out how to check if previous room is solved
-        if False:
-            return redirect("/login")
+        if solved[location] == False:
+            return redirect(f"/room_{location-1}")
         return f(*args, **kwargs)
     return decorated_function
 
@@ -30,7 +31,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def homepage():
     return render_template("homepage.html")
 
