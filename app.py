@@ -34,7 +34,7 @@ def after_request(response):
 @app.route("/")
 def homepage():
     global solved
-    solved = {0: True, 1: False, 2: False, 3: False, 4: False}
+    solved = {0: True, 1: False, 2: False, 3: False}
     return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
