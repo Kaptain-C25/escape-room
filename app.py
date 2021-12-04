@@ -12,16 +12,16 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 db = SQL("sqlite:///inventory.db")
 
 location = 1
-solved = {1: False, 2: False, 3: False}
+solved = {1: False, 2: False, 3: False, 4: False}
 
-def solve_required(f):
+def solve_required(f, loc):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if solved[location] == False:
-            if location == 1:
+        if solved[loc] == False:
+            if loc == 1:
                 return redirect("/")
             else:
-                return redirect(f"/room_{location - 1}")
+                return redirect(f"/room_{loc - 1}")
         return f(*args, **kwargs)
     return decorated_function
 
@@ -38,7 +38,7 @@ def homepage():
     return render_template("homepage.html")
 
 @app.route("/room_1", methods=["GET", "POST"])
-@solve_required
+@solve_required(1)
 def room_1():
     global location
     global solved
@@ -50,20 +50,19 @@ def room_1():
         return render_template("room_1.html")
 
 @app.route("/room_2", methods=["GET", "POST"])
-@solve_required
+@solve_required(2)
 def room_2():
     global location
     global solved
     if request.method == "POST":
         solved[location] = True
         location += 1
-    if request.method == "POST":
         return redirect("/room_3", code=303)
     else:
         return render_template("room_2.html")
 
 @app.route("/room_3", methods=["GET", "POST"])
-@solve_required
+@solve_required(3)
 def room_3():
     global location
     global solved
@@ -75,6 +74,6 @@ def room_3():
         return render_template("room_3.html")
 
 @app.route("/end")
-@solve_required
+@solve_required(4)
 def end():
     return render_template("end.html")
