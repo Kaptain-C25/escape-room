@@ -14,16 +14,18 @@ db = SQL("sqlite:///inventory.db")
 location = 1
 solved = {1: False, 2: False, 3: False, 4: False}
 
-def solve_required(f, loc):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if solved[loc] == False:
-            if loc == 1:
-                return redirect("/")
-            else:
-                return redirect(f"/room_{loc - 1}")
-        return f(*args, **kwargs)
-    return decorated_function
+def solve_required(loc):
+    def test(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            if solved[loc] == False:
+                if loc == 1:
+                    return redirect("/")
+                else:
+                    return redirect(f"/room_{loc - 1}")
+            return f(*args, **kwargs)
+        return decorated_function
+    return test
 
 @app.after_request
 def after_request(response):
