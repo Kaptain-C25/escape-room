@@ -28,9 +28,10 @@
     left: 50%;
     transform: translate(-50%, -40%);
     -ms-transform: translate(-50%, -40%);
-    color: white;
+    color: yellow;
     font-family: arcadeclassicregular;
     font-weight: 800;
+    font-size: 100px;
  }
 
  .homecontainer .startbtn {
@@ -46,6 +47,7 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-family: arcadeclassicregular
 }
 .homecontainer .endbtn {
    position: absolute;
