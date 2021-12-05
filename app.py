@@ -45,9 +45,9 @@ def room_1():
     else:
         return render_template("room_1.html", items=items)
 
-@app.route("/answer_1_1", methods=["POST"])
+@app.route("/answer_1", methods=["POST"])
 @solve_required(1)
-def answer_1_1():
+def answer_1():
     global items
     if request.form.get("answer_1_1") == "Kaitlyn":
         if 'W' not in items:
