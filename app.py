@@ -34,7 +34,7 @@ def homepage():
     items = []
     return render_template("homepage.html")
 
-@app.route("/room_1", methods=["GET", "POST","hint_1"])
+@app.route("/room_1", methods=["GET", "POST","answer_1"])
 @solve_required(1)
 def room_1():
     global solved
@@ -45,20 +45,20 @@ def room_1():
     else:
         return render_template("room_1.html", items=items)
 
-@app.route("/hint_1_1", methods=["POST"])
+@app.route("/answer_1_1", methods=["POST"])
 @solve_required(1)
-def hint_1_1():
+def answer_1_1():
     global items
-    if request.form.get("hint_1_1") == "Kaitlyn":
+    if request.form.get("answer_1_1") == "Kaitlyn":
         if 'W' not in items:
             items += 'W'
-    elif request.form.get("hint_1_2") == "Kaitlyn":
+    elif request.form.get("answer_1_2") == "Kaitlyn":
         if 'A' not in items:
             items += 'A'
-    elif request.form.get("hint_1_3") == "Kaitlyn":
+    elif request.form.get("answer_1_3") == "Kaitlyn":
         if 'S' not in items:
             items += 'S'
-    elif request.form.get("hint_1_4") == "Kaitlyn":
+    elif request.form.get("answer_1_4") == "Kaitlyn":
         if 'P' not in items:
             items += 'P'
     return render_template("room_1.html", items=items)
