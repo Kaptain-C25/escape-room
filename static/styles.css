@@ -211,6 +211,63 @@
    padding: 30px;
 }
 
+#room3btn1 {
+   position: absolute;
+   top: 59%;
+   left: 49%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   padding: 20px;
+   padding-left: 150px;
+   /*background: transparent;
+   border-color: transparent;*/
+}
+
+#room3btn2 {
+   position: absolute;
+   top: 43%;
+   left: 17%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 10px;
+   padding-left: 50px;
+}
+
+#room3btn3 {
+   position: absolute;
+   top: 105%;
+   left: 27%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 10px;
+}
+
+#room3btn4 {
+   position: absolute;
+   top: 55%;
+   left: 88%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 15px;
+}
+
+#room3btn5 {
+   position: absolute;
+   top: 30%;
+   left: 74%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 30px;
+}
+
 .room {
    height: 100%;
    width: 100%;
