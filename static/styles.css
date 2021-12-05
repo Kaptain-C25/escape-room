@@ -168,13 +168,14 @@
 
 #room2btn2 {
    position: absolute;
-   top: 90%;
-   left: 20%;
+   top: 43%;
+   left: 17%;
    transform: translate(-20%, -50%);
    -ms-transform: translate(-20%, -50%);
    /*background: transparent;
    border-color: transparent;*/
-   padding: 22px;
+   padding: 10px;
+   padding-left: 50px;
 }
 
 #room2btn3 {
