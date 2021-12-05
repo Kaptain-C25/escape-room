@@ -98,7 +98,7 @@
  }
  
  /* Full-width input fields */
- .form-container input[type=text], .form-container input[type=password] {
+ .form-container input[type=text] {
    width: 100%;
    padding: 15px;
    margin: 5px 0 22px 0;
@@ -107,12 +107,12 @@
  }
  
  /* When the inputs get focus, do something */
- .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+ .form-container input[type=text]:focus {
    background-color: #ddd;
    outline: none;
  }
  
- /* Set a style for the submit/login button */
+ /* Set a style for the submit button */
  .form-container .btn {
    background-color: #04AA6D;
    color: white;
@@ -134,13 +134,6 @@
    opacity: 1;
  }
 
- /* need more formating */
-.hint1_1 {
-   position: absolute;
-   top: 60%;
-   left: 51%;
-}
-
 #room1btn1 {
     position: absolute;
     top: 60%;
@@ -150,6 +143,12 @@
     padding: 45px;
     background: transparent;
     border-color: transparent;
+}
+
+#hint1_1 {
+   position: absolute;
+   top: 60%;
+   left: 51%;
 }
 
 #room1btn2 {
@@ -163,6 +162,12 @@
     padding: 22px;
 }
 
+#hint1_2 {
+   position: absolute;
+   top: 10%;
+   left: 20%;
+}
+
 #room1btn3 {
     position: absolute;
     top: 90%;
@@ -172,6 +177,12 @@
     background: transparent;
     border-color: transparent;
     padding: 10px;
+}
+
+#hint1_1 {
+   position: absolute;
+   top: 90%;
+   left: 30%;
 }
 
 #room1btn4 {
@@ -186,6 +197,12 @@
     padding-bottom: 35px;
 }
 
+#hint1_1 {
+   position: absolute;
+   top: 85%;
+   left: 84%;
+}
+
 .room1btn5 {
     position: absolute;
     top: 40%;
@@ -195,6 +212,12 @@
     background: transparent;
     border-color: transparent;
     padding: 30px;
+}
+
+#hint1_5 {
+   position: absolute;
+   top: 40%;
+   left: 90%;
 }
 
 #room2btn1 {
