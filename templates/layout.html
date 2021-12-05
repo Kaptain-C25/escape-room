@@ -18,11 +18,11 @@
     <title>Room {% block title %}{% endblock %}</title>
 
     <script>
-        function openForm(num) {
-            document.getElementById(`myForm${num}`).style.display = "block";
+        function openForm(room, hint) {
+            document.getElementById(`hint_${room}_${hint}`).style.display = "block";
         }
-        function closeForm(num) {
-            document.getElementById(`myForm${num}`).style.display = "none";
+        function closeForm(room, hint) {
+            document.getElementById(`hint_${room}_${hint}`).style.display = "none";
         }
     </script>
 
