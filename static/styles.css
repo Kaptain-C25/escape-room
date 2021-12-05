@@ -179,7 +179,7 @@
     padding: 10px;
 }
 
-#hint1_1 {
+#hint1_3 {
    position: absolute;
    top: 90%;
    left: 30%;
@@ -197,27 +197,10 @@
     padding-bottom: 35px;
 }
 
-#hint1_1 {
+#hint1_4 {
    position: absolute;
    top: 85%;
    left: 84%;
-}
-
-.room1btn5 {
-    position: absolute;
-    top: 40%;
-    left: 90%;
-    transform: translate(-20%, -50%);
-    -ms-transform: translate(-20%, -50%);
-    background: transparent;
-    border-color: transparent;
-    padding: 30px;
-}
-
-#hint1_5 {
-   position: absolute;
-   top: 40%;
-   left: 90%;
 }
 
 #room2btn1 {
