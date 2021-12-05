@@ -154,7 +154,63 @@
     padding: 30px;
 }
 
+#room2btn1 {
+   position: absolute;
+   top: 60%;
+   left: 51%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   padding: 45px;
+   /*background: transparent;
+   border-color: transparent;*/
+}
+
+#room2btn2 {
+   position: absolute;
+   top: 10%;
+   left: 20%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 22px;
+}
+
+#room2btn3 {
+   position: absolute;
+   top: 90%;
+   left: 30%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 10px;
+}
+
+#room2btn4 {
+   position: absolute;
+   top: 85%;
+   left: 84%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 5px;
+   padding-bottom: 35px;
+}
+
+#room2btn5 {
+   position: absolute;
+   top: 40%;
+   left: 90%;
+   transform: translate(-20%, -50%);
+   -ms-transform: translate(-20%, -50%);
+   /*background: transparent;
+   border-color: transparent;*/
+   padding: 30px;
+}
+
 .room {
-   height: auto;
+   height: 100%;
    width: 100%;
 }
