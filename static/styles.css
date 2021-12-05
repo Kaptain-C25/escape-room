@@ -47,8 +47,14 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-family: arcadeclassicregular
+    font-family: arcadeclassicregular;
 }
+
+.homecontainer .startbtn:hover {
+   background-color: white;
+   color: #A946BE;
+}
+
 .homecontainer .endbtn {
    position: absolute;
    top: 50%;
