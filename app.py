@@ -52,13 +52,13 @@ def answer_1():
     if request.form.get("answer_1_1") == "Kaitlyn":
         if 'W' not in items:
             items += 'W'
-    elif request.form.get("answer_1_2") == "Kaitlyn":
+    if request.form.get("answer_1_2") == "Kaitlyn":
         if 'A' not in items:
             items += 'A'
-    elif request.form.get("answer_1_3") == "Kaitlyn":
+    if request.form.get("answer_1_3") == "Kaitlyn":
         if 'S' not in items:
             items += 'S'
-    elif request.form.get("answer_1_4") == "Kaitlyn":
+    if request.form.get("answer_1_4") == "Kaitlyn":
         if 'P' not in items:
             items += 'P'
     return render_template("room_1.html", items=items)
