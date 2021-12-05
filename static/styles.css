@@ -213,12 +213,12 @@
 
 #room3btn1 {
    position: absolute;
-   top: 59%;
-   left: 49%;
+   top: 65%;
+   left: 62%;
    transform: translate(-50%, -50%);
    -ms-transform: translate(-50%, -50%);
    padding: 20px;
-   padding-left: 150px;
+   padding-left: 30px;
    /*background: transparent;
    border-color: transparent;*/
 }
