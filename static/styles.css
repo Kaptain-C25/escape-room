@@ -61,6 +61,7 @@
    left: 50%;
    transform: translate(-50%, -40%);
    -ms-transform: translate(-50%, -40%);
+   width: 75%;
 }
 
 .homecontainer .endbtn {
