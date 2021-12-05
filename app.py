@@ -1,5 +1,3 @@
-import re
-from cs50 import SQL
 from flask import Flask, redirect, render_template, request
 from functools import wraps
 
@@ -8,9 +6,6 @@ app = Flask(__name__)
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-
-# Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///inventory.db")
 
 solved = {0: True, 1: False, 2: False, 3: False, 4: False}
 items = []
@@ -50,9 +45,9 @@ def room_1():
     else:
         return render_template("room_1.html", items=items)
 
-@app.route("/hint_1", methods=["POST"])
+@app.route("/hint_1_1", methods=["POST"])
 @solve_required(1)
-def hint_1():
+def hint_1_1():
     global items
     if request.form.get("hint_1_1") == "Kaitlyn":
         if 'W' not in items:
