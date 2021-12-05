@@ -157,7 +157,7 @@
 #room2btn1 {
    position: absolute;
    top: 59%;
-   left: 48%;
+   left: 49%;
    transform: translate(-50%, -50%);
    -ms-transform: translate(-50%, -50%);
    padding: 20px;
@@ -168,7 +168,7 @@
 
 #room2btn2 {
    position: absolute;
-   top: 10%;
+   top: 90%;
    left: 20%;
    transform: translate(-20%, -50%);
    -ms-transform: translate(-20%, -50%);
