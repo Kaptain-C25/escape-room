@@ -86,6 +86,7 @@
 }
 
 .form-popup {
+   display: none;
    border: 3px solid #f1f1f1;
    background-color: white;
    z-index: 9;
