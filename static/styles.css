@@ -319,8 +319,11 @@
 }
 
 .room {
-   height: 100%;
-   width: 100%;
    position: relative;
    top: 0px;
+}
+
+.room_pic {
+   height: 100%;
+   width: 100%;
 }
