@@ -83,7 +83,7 @@ def room_2():
         return render_template("room_2.html", items=items)
 
 @app.route("/answer_2", methods=["POST"])
-@solve_required(1)
+@solve_required(2)
 def answer_2():
     global items
     if request.form.get("answer_2_1").lower() == "Kaitlyn":
