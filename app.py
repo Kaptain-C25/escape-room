@@ -34,7 +34,7 @@ def homepage():
     items = []
     return render_template("homepage.html")
 
-@app.route("/room_1", methods=["GET", "POST","answer_1"])
+@app.route("/room_1", methods=["GET", "POST"])
 @solve_required(1)
 def room_1():
     global solved
