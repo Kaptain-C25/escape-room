@@ -77,6 +77,24 @@ def room_2():
     else:
         return render_template("room_2.html", items=items)
 
+@app.route("/answer_2", methods=["POST"])
+@solve_required(1)
+def answer_2():
+    global items
+    if request.form.get("answer_2_1").lower() == "Kaitlyn":
+        if 'W' not in items:
+            items += 'W'
+    if request.form.get("answer_2_2").lower() == "Kaitlyn":
+        if 'A' not in items:
+            items += 'A'
+    if request.form.get("answer_2_3").lower() == "Kaitlyn":
+        if 'S' not in items:
+            items += 'S'
+    if request.form.get("answer_2_4").lower() == "Kaitlyn":
+        if 'P' not in items:
+            items += 'P'
+    return render_template("room_2.html", items=items)
+
 @app.route("/room_3", methods=["GET", "POST"])
 @solve_required(3)
 def room_3():
