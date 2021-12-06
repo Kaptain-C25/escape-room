@@ -42,6 +42,7 @@ def room_1():
     if request.method == "POST":
         if request.form.get("password").lower() == "wasp":
             solved[1] = True
+            items = []
             return redirect("/room_2", code=303)
         else:
             return redirect("/room_1", code=303)
