@@ -216,6 +216,12 @@
    border-color: transparent;*/
 }
 
+#answer_2_1 {
+   position: absolute;
+   top: 69%;
+   left: 49%;
+}
+
 #room2btn2 {
    position: absolute;
    top: 53%;
@@ -226,6 +232,12 @@
    border-color: transparent;*/
    padding: 10px;
    padding-left: 50px;
+}
+
+#answer_2_2 {
+   position: absolute;
+   top: 53%;
+   left: 17%;
 }
 
 #room2btn3 {
@@ -239,6 +251,12 @@
    padding: 10px;
 }
 
+#answer_2_3 {
+   position: absolute;
+   top: 115%;
+   left: 27%;
+}
+
 #room2btn4 {
    position: absolute;
    top: 65%;
@@ -250,6 +268,12 @@
    padding: 15px;
 }
 
+#answer_2_4 {
+   position: absolute;
+   top: 65%;
+   left: 88%;
+}
+
 #room2btn5 {
    position: absolute;
    top: 40%;
@@ -259,6 +283,12 @@
    /*background: transparent;
    border-color: transparent;*/
    padding: 30px;
+}
+
+#answer_2_5 {
+   position: absolute;
+   top: 40%;
+   left: 74%;
 }
 
 #room3btn1 {
