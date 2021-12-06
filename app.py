@@ -45,7 +45,7 @@ def room_1():
             items = []
             return redirect("/room_2", code=303)
         else:
-            return redirect("/room_1", code=303)
+            return render_template("room_1.html", items=items)
     else:
         return render_template("room_1.html", items=items)
 
@@ -71,9 +71,14 @@ def answer_1():
 @solve_required(2)
 def room_2():
     global solved
+    global items
     if request.method == "POST":
-        solved[2] = True
-        return redirect("/room_3", code=303)
+        if request.form.get("password").lower() == "4768a":
+            solved[2] = True
+            items = []
+            return render_template("room_2.html", items=items)
+        else:
+            return redirect("/room_2", code=303)
     else:
         return render_template("room_2.html", items=items)
 
@@ -82,17 +87,20 @@ def room_2():
 def answer_2():
     global items
     if request.form.get("answer_2_1").lower() == "Kaitlyn":
-        if 'W' not in items:
-            items += 'W'
+        if '4' not in items:
+            items += '4'
     if request.form.get("answer_2_2").lower() == "Kaitlyn":
+        if '7' not in items:
+            items += '7'
+    if request.form.get("answer_2_3").lower() == "Kaitlyn":
+        if '6' not in items:
+            items += '6'
+    if request.form.get("answer_2_4").lower() == "Kaitlyn":
+        if '8' not in items:
+            items += '8'
+    if request.form.get("answer_2_5").lower() == "Kaitlyn":
         if 'A' not in items:
             items += 'A'
-    if request.form.get("answer_2_3").lower() == "Kaitlyn":
-        if 'S' not in items:
-            items += 'S'
-    if request.form.get("answer_2_4").lower() == "Kaitlyn":
-        if 'P' not in items:
-            items += 'P'
     return render_template("room_2.html", items=items)
 
 @app.route("/room_3", methods=["GET", "POST"])
