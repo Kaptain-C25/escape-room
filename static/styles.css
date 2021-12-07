@@ -105,7 +105,10 @@ body {
 
  .form-container {
    max-width: 300px;
-   padding: 10px;
+   padding-top: 0px;
+   padding-bottom: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
    background-color: white;
  }
  
@@ -141,6 +144,7 @@ body {
  .form-container .cancel {
    background-color: red;
    font-family: arcadeclassicregular;
+   font-size: 30px;
  }
  
  /* Add some hover effects to buttons */
