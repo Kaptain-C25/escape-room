@@ -362,7 +362,7 @@ body {
    width: 100%;
 }
 
-h2 {
+h1 {
    font-family: arcadeclassicregular;
 }
 
@@ -373,6 +373,7 @@ p {
 
 .answer {
    font-family: arcadeclassicregular;
+   font-size: 24px;
 }
 
 button {
