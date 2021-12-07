@@ -117,8 +117,8 @@ def room_3():
         return render_template("room_3.html", items=items)
 
 @app.route("/answer_3", methods=["POST"])
-@solve_required(1)
-def answer_1():
+@solve_required(3)
+def answer_3():
     global items
     if re.search('g', str(request.form.get("answer_3_1")), re.IGNORECASE):
         if 'G' not in items:
