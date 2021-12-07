@@ -52,6 +52,7 @@ def room_1():
 @app.route("/answer_1", methods=["POST"])
 @solve_required(1)
 def answer_1():
+    print(request.form.get("answer_1_1"), request.form.get("answer_1_2"), request.form.get("answer_1_3"), request.form.get("answer_1_4"))
     global items
     if request.form.get("answer_1_1") != None and request.form.get("answer_1_1").lower() == "w":
         if 'W' not in items:
