@@ -40,7 +40,8 @@ def room_1():
     global solved
     global items
     if request.method == "POST":
-        if request.form.get("password").lower() == "wasp":
+        password = str(request.form.get("password"))
+        if password.lower() == "wasp":
             solved[1] = True
             items = []
             return redirect("/room_2", code=303)
