@@ -129,7 +129,7 @@ def answer_3():
     if re.search('m', str(request.form.get("answer_3_3")), re.IGNORECASE):
         if 'M' not in items:
             items += 'M'
-    print (str(request.form.get("answer_3_4")))
+    re.search('e', str(request.form.get("answer_3_4")), re.IGNORECASE)
     if re.search('e', str(request.form.get("answer_3_4")), re.IGNORECASE):
         if 'E' not in items:
             items += 'E'
