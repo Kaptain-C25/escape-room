@@ -74,12 +74,12 @@ def room_2():
     global solved
     global items
     if request.method == "POST":
-        if request.form.get("password") == "4768":
+        if str(request.form.get("password")) == "7468":
             solved[2] = True
             items = []
-            return render_template("room_2.html", items=items)
+            return redirect("/room_3", code=303)
         else:
-            return redirect("/room_2", code=303)
+            return render_template("room_2.html", items=items)
     else:
         return render_template("room_2.html", items=items)
 
@@ -87,12 +87,12 @@ def room_2():
 @solve_required(2)
 def answer_2():
     global items
-    if request.form.get("answer_2_1") == "4":
-        if '4' not in items:
-            items += '4'
-    if request.form.get("answer_2_2") == "7":
+    if request.form.get("answer_2_1") == "7":
         if '7' not in items:
             items += '7'
+    if request.form.get("answer_2_2") == "4":
+        if '4' not in items:
+            items += '4'
     if request.form.get("answer_2_3") == "6":
         if '6' not in items:
             items += '6'
