@@ -53,7 +53,7 @@ def room_1():
 @solve_required(1)
 def answer_1():
     global items
-    if request.form.get("answer_1_1") == "w":
+    if request.form.get("answer_1_1").lower() == "w":
         if 'W' not in items:
             items += 'W'
     if request.form.get("answer_1_2") == "a":
