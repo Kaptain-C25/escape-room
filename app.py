@@ -53,22 +53,18 @@ def room_1():
 @solve_required(1)
 def answer_1():
     global items
-    if request.form.get("answer_1_1") != None:
-        if request.form.get("answer_1_1").lower() == "w":
-            if 'W' not in items:
-                items += 'W'
-    if request.form.get("answer_1_2") != None:
-        if request.form.get("answer_1_2").lower() == "a":
-            if 'A' not in items:
-                items += 'A'
-    if request.form.get("answer_1_3") != None:
-        if request.form.get("answer_1_3").lower() == "s":
-            if 'S' not in items:
-                items += 'S'
-    if request.form.get("answer_1_4") != None:
-        if request.form.get("answer_1_4").lower() == "p":
-            if 'P' not in items:
-                items += 'P'
+    if request.form.get("answer_1_1") == ("w" or "W"):
+        if 'W' not in items:
+            items += 'W'
+    if request.form.get("answer_1_2") == ("a" or "A"):
+        if 'W' not in items:
+            items += 'A'
+    if request.form.get("answer_1_3") == ("s" or "S"):
+        if 'W' not in items:
+            items += 'S'
+    if request.form.get("answer_1_4") == ("p" or "P"):
+        if 'W' not in items:
+            items += 'P'
     return render_template("room_1.html", items=items)
 
 @app.route("/room_2", methods=["GET", "POST"])
