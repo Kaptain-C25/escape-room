@@ -53,16 +53,16 @@ def room_1():
 @solve_required(1)
 def answer_1():
     global items
-    if request.form.get("answer_1_1").lower() == "7":
+    if request.form.get("answer_1_1").lower() == "w":
         if 'W' not in items:
             items += 'W'
-    if request.form.get("answer_1_2").lower() == "Kaitlyn":
+    if request.form.get("answer_1_2").lower() == "a":
         if 'A' not in items:
             items += 'A'
-    if request.form.get("answer_1_3").lower() == "Kaitlyn":
+    if request.form.get("answer_1_3").lower() == "s":
         if 'S' not in items:
             items += 'S'
-    if request.form.get("answer_1_4").lower() == "Kaitlyn":
+    if request.form.get("answer_1_4").lower() == "p":
         if 'P' not in items:
             items += 'P'
     return render_template("room_1.html", items=items)
@@ -86,16 +86,16 @@ def room_2():
 @solve_required(2)
 def answer_2():
     global items
-    if request.form.get("answer_2_1").lower() == "Kaitlyn":
+    if request.form.get("answer_2_1") == "4":
         if '4' not in items:
             items += '4'
-    if request.form.get("answer_2_2").lower() == "Kaitlyn":
+    if request.form.get("answer_2_2") == "7":
         if '7' not in items:
             items += '7'
-    if request.form.get("answer_2_3").lower() == "Kaitlyn":
+    if request.form.get("answer_2_3") == "6":
         if '6' not in items:
             items += '6'
-    if request.form.get("answer_2_4").lower() == "Kaitlyn":
+    if request.form.get("answer_2_4").lower() == "8":
         if '8' not in items:
             items += '8'
     if request.form.get("answer_2_5").lower() == "Kaitlyn":
