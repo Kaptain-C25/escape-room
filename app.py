@@ -129,8 +129,8 @@ def answer_3():
     if re.search('m', str(request.form.get("answer_3_3")), re.IGNORECASE):
         if 'M' not in items:
             items += 'M'
-    print(re.search('e', str(request.form.get("answer_3_4")), re.IGNORECASE))
-    if re.search('e', str(request.form.get("answer_3_4")), re.IGNORECASE):
+    form_3_4 = request.form.get("answer_3_4")
+    if  form_3_4 != None and form_3_4.lower() == 'e':
         if 'E' not in items:
             items += 'E'
     return render_template("room_3.html", items=items)
