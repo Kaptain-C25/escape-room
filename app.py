@@ -105,11 +105,34 @@ def answer_2():
 @solve_required(3)
 def room_3():
     global solved
+    global items
     if request.method == "POST":
-        solved[3] = True
-        return redirect("/end")
+        if re.search('game', str(request.form.get("password")), re.IGNORECASE):
+            solved[3] = True
+            items = []
+            return redirect("/end", code=303)
+        else:
+            return render_template("room_3.html", items=items)
     else:
         return render_template("room_3.html", items=items)
+
+@app.route("/answer_3", methods=["POST"])
+@solve_required(1)
+def answer_1():
+    global items
+    if re.search('g', str(request.form.get("answer_3_1")), re.IGNORECASE):
+        if 'G' not in items:
+            items += 'G'
+    if re.search('a', str(request.form.get("answer_3_2")), re.IGNORECASE):
+        if 'A' not in items:
+            items += 'A'
+    if re.search('m', str(request.form.get("answer_3_3")), re.IGNORECASE):
+        if 'M' not in items:
+            items += 'M'
+    if re.search('e', str(request.form.get("answer_3_4")), re.IGNORECASE):
+        if 'E' not in items:
+            items += 'E'
+    return render_template("room_3.html", items=items)
 
 @app.route("/end")
 @solve_required(4)
