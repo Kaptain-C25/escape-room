@@ -120,13 +120,16 @@ def room_3():
 @solve_required(3)
 def answer_3():
     global items
-    if re.search('g', str(request.form.get("answer_3_1")), re.IGNORECASE):
+    form_3_1 = request.form.get("answer_3_1")
+    if  form_3_1 != None and form_3_1.lower() == 'g':
         if 'G' not in items:
             items += 'G'
-    if re.search('a', str(request.form.get("answer_3_2")), re.IGNORECASE):
+    form_3_2 = request.form.get("answer_3_2")
+    if  form_3_2 != None and form_3_2.lower() == 'a':
         if 'A' not in items:
             items += 'A'
-    if re.search('m', str(request.form.get("answer_3_3")), re.IGNORECASE):
+    form_3_3 = request.form.get("answer_3_3")
+    if  form_3_3 != None and form_3_3.lower() == 'm':
         if 'M' not in items:
             items += 'M'
     form_3_4 = request.form.get("answer_3_4")
