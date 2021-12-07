@@ -274,23 +274,6 @@
    left: 88%;
 }
 
-#room2btn5 {
-   position: absolute;
-   top: 40%;
-   left: 74%;
-   transform: translate(-20%, -50%);
-   -ms-transform: translate(-20%, -50%);
-   /*background: transparent;
-   border-color: transparent;*/
-   padding: 30px;
-}
-
-#answer_2_5 {
-   position: absolute;
-   top: 40%;
-   left: 74%;
-}
-
 #room3btn1 {
    position: absolute;
    top: 75%;
@@ -359,23 +342,6 @@
    position: absolute;
    top: 65%;
    left: 90%;
-}
-
-#room3btn5 {
-   position: absolute;
-   top: 45%;
-   left: 77%;
-   transform: translate(-20%, -50%);
-   -ms-transform: translate(-20%, -50%);
-   /*background: transparent;
-   border-color: transparent;*/
-   padding: 30px;
-}
-
-#answer_3_5 {
-   position: absolute;
-   top: 45%;
-   left: 77%;
 }
 
 .room {
