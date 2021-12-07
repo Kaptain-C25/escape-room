@@ -12,6 +12,11 @@
    background-color: #537fbe;
 }
 
+.nav-item {
+   padding-left: 10px;
+   height: 60px;
+}
+
 .homecontainer {
     position: relative;
     width: 100%;
