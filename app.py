@@ -95,12 +95,9 @@ def answer_2():
     if request.form.get("answer_2_3") == "6":
         if '6' not in items:
             items += '6'
-    if request.form.get("answer_2_4").lower() == "8":
+    if request.form.get("answer_2_4") == "8":
         if '8' not in items:
             items += '8'
-    if request.form.get("answer_2_5").lower() == "Kaitlyn":
-        if 'A' not in items:
-            items += 'A'
     return render_template("room_2.html", items=items)
 
 @app.route("/room_3", methods=["GET", "POST"])
