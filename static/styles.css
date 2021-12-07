@@ -7,6 +7,10 @@
 
 }
 
+body {
+   background-color: #30106B;
+}
+
 #navbar
 {
    background-color: #537fbe;
@@ -130,11 +134,13 @@
    width: 100%;
    margin-bottom:10px;
    opacity: 0.8;
+   font-family: arcadeclassicregular;
  }
  
  /* Add a red background color to the cancel button */
  .form-container .cancel {
    background-color: red;
+   font-family: arcadeclassicregular;
  }
  
  /* Add some hover effects to buttons */
@@ -365,5 +371,9 @@ p {
 }
 
 .answer {
+   font-family: arcadeclassicregular;
+}
+
+button {
    font-family: arcadeclassicregular;
 }
