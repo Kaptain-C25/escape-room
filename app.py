@@ -54,16 +54,20 @@ def room_1():
 @solve_required(1)
 def answer_1():
     global items
-    if re.search('w', str(request.form.get("answer_1_1")), re.IGNORECASE):
+    form_1_1 = request.form.get("answer_1_1")
+    if  form_1_1 != None and form_1_1.lower() == 'w':
         if 'W' not in items:
             items += 'W'
-    if re.search('a', str(request.form.get("answer_1_2")), re.IGNORECASE):
+    form_1_2 = request.form.get("answer_1_2")
+    if  form_1_2 != None and form_1_2.lower() == 'a':
         if 'A' not in items:
             items += 'A'
-    if re.search('s', str(request.form.get("answer_1_3")), re.IGNORECASE):
+    form_1_3 = request.form.get("answer_1_3")
+    if  form_1_3 != None and form_1_3.lower() == 's':
         if 'S' not in items:
             items += 'S'
-    if re.search('p', str(request.form.get("answer_1_4")), re.IGNORECASE):
+    form_1_4 = request.form.get("answer_1_4")
+    if  form_1_4 != None and form_1_4.lower() == 'p':
         if 'P' not in items:
             items += 'P'
     return render_template("room_1.html", items=items)
