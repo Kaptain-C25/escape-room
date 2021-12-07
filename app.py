@@ -1,3 +1,4 @@
+import re
 from flask import Flask, redirect, render_template, request
 from functools import wraps
 
@@ -40,8 +41,7 @@ def room_1():
     global solved
     global items
     if request.method == "POST":
-        password = str(request.form.get("password"))
-        if password.lower() == "wasp":
+        if re.search('wasp', request.form.get("password"), re.IGNORECASE):
             solved[1] = True
             items = []
             return redirect("/room_2", code=303)
@@ -54,17 +54,17 @@ def room_1():
 @solve_required(1)
 def answer_1():
     global items
-    if request.form.get("answer_1_1") == ("w" or "W"):
+    if re.search('w', request.form.get("answer_1_1"), re.IGNORECASE):
         if 'W' not in items:
             items += 'W'
-    if request.form.get("answer_1_2") == ("a" or "A"):
-        if 'W' not in items:
+    if re.search('a', request.form.get("answer_1_2"), re.IGNORECASE):
+        if 'A' not in items:
             items += 'A'
-    if request.form.get("answer_1_3") == ("s" or "S"):
-        if 'W' not in items:
+    if re.search('s', request.form.get("answer_1_3"), re.IGNORECASE):
+        if 'S' not in items:
             items += 'S'
-    if request.form.get("answer_1_4") == ("p" or "P"):
-        if 'W' not in items:
+    if re.search('p', request.form.get("answer_1_4"), re.IGNORECASE):
+        if 'P' not in items:
             items += 'P'
     return render_template("room_1.html", items=items)
 
