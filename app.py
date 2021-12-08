@@ -36,6 +36,7 @@ def homepage():
     items = []
     return render_template("homepage.html")
 
+# Loads Room 1 & checks room 1 password
 @app.route("/room_1", methods=["GET", "POST"])
 @solve_required(1)
 def room_1():
@@ -51,6 +52,7 @@ def room_1():
     else:
         return render_template("room_1.html", items=items)
 
+# Check room 1 puzzle answers & load inventory
 @app.route("/answer_1", methods=["POST"])
 @solve_required(1)
 def answer_1():
@@ -73,6 +75,7 @@ def answer_1():
             items += 'P'
     return render_template("room_1.html", items=items)
 
+# Loads Room 2 & checks room 2 password
 @app.route("/room_2", methods=["GET", "POST"])
 @solve_required(2)
 def room_2():
@@ -88,6 +91,7 @@ def room_2():
     else:
         return render_template("room_2.html", items=items)
 
+# Check room 1 puzzle answers & load inventory
 @app.route("/answer_2", methods=["POST"])
 @solve_required(2)
 def answer_2():
@@ -106,6 +110,7 @@ def answer_2():
             items += '8'
     return render_template("room_2.html", items=items)
 
+# Loads Room 3 & checks room 3 password
 @app.route("/room_3", methods=["GET", "POST"])
 @solve_required(3)
 def room_3():
@@ -121,6 +126,7 @@ def room_3():
     else:
         return render_template("room_3.html", items=items)
 
+# Check room 1 puzzle answers & load inventory
 @app.route("/answer_3", methods=["POST"])
 @solve_required(3)
 def answer_3():
@@ -143,6 +149,7 @@ def answer_3():
             items += 'E'
     return render_template("room_3.html", items=items)
 
+# Load end page & reset solved statuses
 @app.route("/end")
 @solve_required(4)
 def end():
