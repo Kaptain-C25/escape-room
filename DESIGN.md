@@ -4,7 +4,7 @@ We implemented the online escape room as a web app using HTML, CSS, and Flask.
 
 ## app.py
 
-Here are all the routes to the html pages that does the checking of user input, either adding hint pictures to the nav bar by passing an u or sending the user to the next room/page. 
+Here are all the routes to the html pages that does the checking of user input, either adding hint pictures to the nav bar by passing an updating list to the html pages or sending the user to the next room/page. 
 We also created a decorator function called "solve_required()" that takes the room number as input and checks if previous rooms are solved such that if a user tries to jump to a different room without solving an earlier one, he would be sent back.
 
 ## templates
