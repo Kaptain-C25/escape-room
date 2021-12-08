@@ -1,5 +1,7 @@
 # README
 
+VIDEO: https://youtu.be/drd14ldrzxU
+
 ## THEME
 
 For our project, we created an online escape room. As college students, we know how stressful reading periods and finals can be. Thus, our mission for this CS50 project is to help people have fun and relieve stress through solving different puzzles and riddles. This escape room game can be played either individually or collaboratively. We hope our project can allow everyone to take a break from work and enjoy some puzzles.
