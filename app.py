@@ -11,6 +11,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 solved = {0: True, 1: False, 2: False, 3: False, 4: False}
 items = []
 
+# decorator function to prevent room skipping through url
 def solve_required(loc):
     def test(f):
         @wraps(f)
